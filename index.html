@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🥢 Menu Dimsum Eksklusif 🥢</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Styling */
+        :root {
+            --primary-color: #A30000; /* Merah Dimsum Gelap */
+            --secondary-color: #FFD700; /* Emas */
+            --background-light: #FFF8E1; /* Kuning Pucat */
+            --text-dark: #333333;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* HEADER */
+        .header {
+            text-align: center;
+            padding: 30px 0;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 10px 10px 0 0;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8em;
+            margin: 0;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .header p {
+            font-style: italic;
+            font-size: 1.1em;
+            margin-top: 5px;
+            color: var(--secondary-color);
+        }
+
+        /* MENU SECTION */
+        .menu-category {
+            margin-bottom: 40px;
+        }
+
+        .menu-category h2 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            font-size: 2em;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--secondary-color);
+            display: inline-block;
+            width: 100%;
+        }
+
+        .menu-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .menu-item {
+            flex: 1 1 calc(50% - 20px); /* 2 item per baris */
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .item-name {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+
+        .item-description {
+            font-size: 0.95em;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .item-price {
+            font-weight: 700;
+            color: var(--secondary-color);
+            font-size: 1.1em;
+        }
+
+        /* FOOTER (Opsional) */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        /* Responsiveness untuk layar kecil */
+        @media (max-width: 600px) {
+            .menu-item {
+                flex: 1 1 100%; /* 1 item per baris di HP */
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header class="header">
+            <h1>Dimsum Heaven</h1>
+            <p>Hidangan Kukus Otentik yang Menyentuh Hati</p>
+        </header>
+
+        ---
+
+        <section class="menu-category">
+            <h2>Pilihan Kukus Klasik (Steamed)</h2>
+            <div class="menu-list">
+                
+                <div class="menu-item">
+                    <div class="item-name">🥟 Siomay Ayam Udang</div>
+                    <div class="item-description">Perpaduan daging ayam dan udang segar dibungkus kulit kuning, disajikan dengan saus cabai khas.</div>
+                    <div class="item-price">Rp 25.000,-</div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-name">🍤 Hakau (Har Gow)</div>
+                    <div class="item-description">Pangsit udang utuh dengan kulit bening yang tipis dan kenyal. Kelembutan udang yang manis.</div>
+                    <div class="item-price">Rp 28.000,-</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">🥚 Bapao Telur Asin Leleh (Liu Sha Bao)</div>
+                    <div class="item-description">Roti kukus selembut awan dengan isian krim telur asin yang hangat dan lumer di mulut.</div>
+                    <div class="item-price">Rp 22.000,-</div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-name">🍄 Siomay Jamur Truffle</div>
+                    <div class="item-description">Dimsum mewah dengan sentuhan minyak truffle aromatik dan taburan jamur shitake premium.</div>
+                    <div class="item-price">Rp 35.000,-</div>
+                </div>
+                
+            </div>
+        </section>
+
+        ---
+
+        <section class="menu-category">
+            <h2>Pilihan Goreng & Panggang (Fried & Baked)</h2>
+            <div class="menu-list">
+                
+                <div class="menu-item">
+                    <div class="item-name">🍢 Lumpia Kulit Tahu Goreng</div>
+                    <div class="item-description">Isian daging gurih yang dibungkus kulit kembang tahu renyah, digoreng hingga sempurna.</div>
+                    <div class="item-price">Rp 24.000,-</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">🥖 Char Siu Bao Panggang</div>
+                    <div class="item-description">Roti panggang manis dengan isian daging babi panggang (atau ayam) beraroma saus BBQ.</div>
+                    <div class="item-price">Rp 26.000,-</div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            Terima kasih telah menikmati sajian Dimsum kami. Dibuat dengan cinta dan tradisi.
+        </footer>
+
+    </div>
+
+</body>
+</html>
